@@ -1,0 +1,255 @@
+.ai-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 16px;
+  animation: fadeIn 0.2s ease;
+}
+
+.ai-modal-card {
+  width: 100%;
+  max-width: 640px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.ai-modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.ai-title-box h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.ai-title-box span {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.ai-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.ai-modal-body {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ai-scanner-dropzone {
+  position: relative;
+  height: 140px;
+  border: 2px dashed #94a3b8;
+  border-radius: 10px;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.dropzone-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.upload-icon {
+  font-size: 28px;
+}
+
+.drop-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.drop-sub {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.hidden-file-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.ai-scanning-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.laser-beam {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #10b981, #059669);
+  box-shadow: 0 0 15px #10b981;
+  animation: laserScan 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes laserScan {
+  0% { top: 5%; }
+  100% { top: 95%; }
+}
+
+.scanning-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: #059669;
+}
+
+.ai-samples-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.samples-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.samples-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.sample-btn {
+  padding: 4px 10px;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.sample-btn:hover, .sample-btn.active {
+  background: #2d3748;
+  color: #ffffff;
+  border-color: #2d3748;
+}
+
+.ai-extracted-results {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.results-title {
+  margin: 0 0 10px 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #059669;
+}
+
+.results-grid {
+  display: flex;
+  gap: 16px;
+}
+
+.photo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.guest-extracted-photo {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #059669;
+}
+
+.photo-label {
+  font-size: 9px;
+  color: #64748b;
+}
+
+.fields-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  flex: 1;
+}
+
+.result-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-key {
+  font-size: 10px;
+  color: #64748b;
+}
+
+.field-val {
+  font-size: 12px;
+  color: #1e293b;
+}
+
+.ai-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 14px 24px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.btn-primary-dark {
+  background: #2d3748;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primary-dark:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

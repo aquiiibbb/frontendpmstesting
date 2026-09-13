@@ -1,0 +1,223 @@
+/* EXECUTIVE CLEAN & PROFESSIONAL DASHBOARD STYLES (100% Rule-Compliant Theme) */
+
+/* Rule 1: Background page color is #ffffff */
+.dashboard-realtime-container {
+  padding: 24px 28px;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  background: #ffffff;
+  color: #000000;
+}
+
+/* TOP MASTER KPI SUMMARY STRIP (#fff6e3 Master Box Highlight) */
+.dash-kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+  .dash-kpi-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.dash-kpi-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: all 0.15s ease;
+}
+
+.dash-kpi-card:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+}
+
+.dash-kpi-card .lbl {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.dash-kpi-card .val {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.dash-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.dash-charts-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .dash-charts-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Rule 2: Box Highlights & Containers in Grey (#e2e8f0) */
+.dash-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dash-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.dash-card-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  color: #000000;
+}
+
+.dash-card-sub {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.dash-pill-toggle {
+  display: inline-flex;
+  background: #f8fafc;
+  padding: 2px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.dash-pill-btn {
+  border: none;
+  background: transparent;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.dash-pill-btn.active {
+  background: #000000;
+  color: #ffffff;
+}
+
+.dash-month-selector {
+  display: inline-flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 2px 4px;
+}
+
+.dash-month-nav-btn {
+  background: transparent;
+  border: none;
+  color: #000000;
+  font-weight: 800;
+  font-size: 13px;
+  padding: 2px 6px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dash-month-nav-btn:hover {
+  background: #f1f5f9;
+}
+
+.dash-month-label {
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #000000;
+  padding: 0 6px;
+}
+
+.dash-chart-container {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+/* SOURCE BREAKDOWN TABLE (Rule 3: Figures in Black) */
+.dash-source-table-wrapper {
+  margin-top: 10px;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 10px;
+}
+
+.dash-source-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+
+.dash-source-table th {
+  text-align: left;
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1.5px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.dash-source-table td {
+  padding: 10px 12px;
+  color: #000000;
+  font-weight: 600;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* Rule 3: Highlighting Numbers / Total Figures in Black */
+.dash-source-table td strong {
+  color: #000000;
+  font-weight: 800;
+}
+
+.dash-source-table tr.total-row td {
+  border-top: 2px solid #cbd5e1;
+  border-bottom: none;
+  font-weight: 800;
+  color: #000000;
+  background: #f8fafc;
+}

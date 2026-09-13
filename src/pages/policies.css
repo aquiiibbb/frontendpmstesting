@@ -1,0 +1,54 @@
+/* ---------- Policies ---------- */
+.policy-form { margin-bottom: 20px; border-top: 3px solid var(--gold-500); max-width: 720px; }
+.policy-form textarea { resize: vertical; min-height: 110px; line-height: 1.5; }
+
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.policy-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: fadeSlideUp 0.35s ease both;
+}
+.policy-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+.policy-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.policy-icon {
+  width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0;
+  background: var(--gold-050); color: var(--gold-600);
+  display: flex; align-items: center; justify-content: center;
+}
+
+.policy-card-head h3 {
+  font-family: var(--font-display);
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--navy-900);
+  flex: 1;
+  margin: 0;
+}
+
+.policy-delete {
+  border: none; background: transparent; color: var(--text-400); font-size: 12px;
+  cursor: pointer; padding: 4px 6px; border-radius: 6px; transition: color 0.15s ease, background 0.15s ease;
+  line-height: 1;
+}
+.policy-delete:hover { color: var(--danger); background: var(--danger-bg); }
+
+.policy-body {
+  font-size: 13px;
+  color: var(--text-600);
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .policy-grid { grid-template-columns: 1fr; }
+}
